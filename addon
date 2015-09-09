@@ -1,0 +1,13 @@
+// privileged scope: for example, a content script (i.e. a firefox addon)
+
+function changeMyName(user) {
+  user.name = "Bill";
+}
+
+exportFunction(changeMyName, contentWindow, {
+  defineAs: "changeMyName"
+});
+
+
+
+
